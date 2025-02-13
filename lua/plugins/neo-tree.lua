@@ -1,4 +1,4 @@
--- vim.keymap.set("n", "<F5>", ":Neotree toggle<CR>", {})
+vim.keymap.set("n", "<F5>", ":Neotree toggle<CR>", {})
 vim.keymap.set("n", "<leader>nt", ":Neotree toggle<CR>", {})
 
 return {
@@ -25,12 +25,12 @@ return {
                         staged = "󰱒",
                     },
                 },
-            }, 
+            },
             source_selector = {
                 winbar = true,
                 statusline = true,
             }
-        })   
+        })
     end,
 }
 

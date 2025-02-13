@@ -1,15 +1,15 @@
 vim.api.nvim_set_keymap("n", "<leader>sv", ":vsplit<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>sh", ":split<CR>", { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap("n", "<leader>sh", ":split<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "<leader>h", "<C-w>h", { noremap = true, silent = true }) 
-vim.api.nvim_set_keymap("n", "<leader>j", "<C-w>j", { noremap = true, silent = true }) 
-vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", { noremap = true, silent = true }) 
-vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap("n", "<leader>h", "<C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>j", "<C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-k>", ":resize +2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-j>", ":resize -2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-l>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-h>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 
 -- sudo pacman -S wl-clipboard
 -- Copy the absolute file path to clipboard
@@ -41,7 +41,6 @@ vim.keymap.set({ "n", "v" }, "<leader>p", function()
     local clipboard_content = vim.fn.system("wl-paste") -- Get content from clipboard
     clipboard_content = clipboard_content:gsub("\r", "") -- Remove carriage return characters
     clipboard_content = vim.split(clipboard_content, "\n") -- Split into lines
-    
     vim.api.nvim_put(clipboard_content, "", true, true) -- Paste at cursor position
 end, { desc = "Paste from clipboard" })
 
