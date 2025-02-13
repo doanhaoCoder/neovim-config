@@ -1,5 +1,5 @@
-vim.keymap.set("n", "<F6>", ":Telescope find_files<CR>", {})
-vim.keymap.set("n", "<F7>", ":Telescope live_grep<CR>", {})
+-- vim.keymap.set("n", "<F6>", ":Telescope find_files<CR>", {})
+-- vim.keymap.set("n", "<F7>", ":Telescope live_grep<CR>", {})
 
 return {
 	{
@@ -11,6 +11,8 @@ return {
 			-- use telescope'
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+			vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {})
+			vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 			vim.keymap.set("n", "<leader>pf", builtin.git_files, {})
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
